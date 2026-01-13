@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>THE SACRIFICE | SUBMIT YOUR TALE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="story-page-body">
+    <div class="vignette"></div>
+    
+    <main class="story-reader" style="background: #111; border: 2px dashed #8b0000;">
+        <a href="index.html" class="home-btn">← BACK TO THE HUB</a>
+        
+        <h1 class="glitch" style="font-family: 'Nosifer'; color: #8b0000; text-align: center;">THE SACRIFICE</h1>
+        <p style="text-align: center; color: #666; font-style: italic;">"Write it down before you forget... or before they find you."</p>
+
+        <form id="submission-form" style="margin-top: 30px; display: flex; flex-direction: column; gap: 20px;">
+            <div>
+                <label style="display: block; font-family: 'Creepster'; color: #8b0000; margin-bottom: 5px;">YOUR NAME (OR ANONYMOUS)</label>
+                <input type="text" placeholder="Enter name..." style="width: 100%; padding: 12px; background: #000; border: 1px solid #444; color: #fff; font-family: 'Special Elite';">
+            </div>
+
+            <div>
+                <label style="display: block; font-family: 'Creepster'; color: #8b0000; margin-bottom: 5px;">YOUR TALE</label>
+                <textarea rows="10" placeholder="Begin your nightmare..." style="width: 100%; padding: 12px; background: #000; border: 1px solid #444; color: #fff; font-family: 'Special Elite'; resize: vertical;"></textarea>
+            </div>
+
+            <button type="button" onclick="sacrificeTale()" class="read-btn" style="cursor: crosshair; width: 100%; border: none; font-size: 1.5rem;">SACRIFICE STORY</button>
+        </form>
+
+        <div id="success-msg" style="display: none; text-align: center; color: #f00; font-family: 'Nosifer'; margin-top: 20px;">
+            STORY RECEIVED. WE ARE WATCHING.
+        </div>
+    </main>
+
+    <script>
+        function sacrificeTale() {
+            document.getElementById('submission-form').style.display = 'none';
+            document.getElementById('success-msg').style.display = 'block';
+            // In a real website, you would send this data to a database here.
+        }
+    </script>
+</body>
+</html>
